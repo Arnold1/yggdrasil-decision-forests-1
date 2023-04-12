@@ -68,7 +68,7 @@ type genericNode struct {
 	//
 	// Note: The negative node is always next to its parent node. In other words,
 	// the offset of the negative child node is always 1.
-	rightIdx uint16
+	rightIdx uint32
 
 	// Index of the feature being tested. The exact interpretation of "featureIdx"
 	// depends on "condition".
@@ -329,10 +329,10 @@ func (e *genericEngine) addNode(srcNode *dt.Node, buildMap *example.FeatureConst
 	if rightIdx <= 0 {
 		return fmt.Errorf("Invalid child")
 	}
-	if rightIdx > math.MaxUint16 {
+	if rightIdx > math.MaxUint32 {
 		return fmt.Errorf("To many nodes in a single branch")
 	}
-	e.nodes[nodeIdx].rightIdx = uint16(rightIdx)
+	e.nodes[nodeIdx].rightIdx = uint32(rightIdx)
 
 	// Build the positive branch.
 	if err := e.addNode(srcNode.PositiveChild, buildMap, setLeaf); err != nil {
