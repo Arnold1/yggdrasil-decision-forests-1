@@ -21,14 +21,14 @@ import (
 	"fmt"
 	"math"
 
-	dt "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/model/decisiontree"
-	gbt "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/model/gradientboostedtrees"
-	rf "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/model/randomforest"
-	"github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/serving/example"
+	dt "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil_decision_forests/port/go/model/decisiontree"
+	gbt "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil_decision_forests/port/go/model/gradientboostedtrees"
+	rf "github.com/Arnold1/yggdrasil-decision-forests-1//yggdrasil_decision_forests/port/go/model/randomforest"
+	"github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil_decision_forests/port/go/serving/example"
 
-	dataspec_pb "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/dataset/proto"
-	model_pb "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/model/proto"
-	gbt_pb "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil-decision-forests/yggdrasil_decision_forests/port/go/model/gradientboostedtrees/proto"
+	dataspec_pb "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil_decision_forests/port/go/dataset/proto"
+	model_pb "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil_decision_forests/port/go/model/proto"
+	gbt_pb "github.com/Arnold1/yggdrasil-decision-forests-1/yggdrasil_decision_forests/port/go/model/gradientboostedtrees/proto"
 )
 
 // SetNodeSignature is the signature of a method that set a leaf value during
